@@ -1,0 +1,595 @@
+/**
+ * МАШГОРПРОМ — Современный дизайн главной страницы
+ * Минималистичный промышленный стиль с акцентом на читаемость
+ */
+
+/* === CSS Variables === */
+:root {
+  --color-bg: #0a0f1a;
+  --color-bg-elevated: #111827;
+  --color-bg-card: #1a2234;
+  --color-surface: #f8fafc;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-accent: #f59e0b;
+  --color-accent-hover: #fbbf24;
+  --color-border: rgba(255,255,255,0.08);
+  --font-heading: 'Bebas Neue', 'Oswald', sans-serif;
+  --font-body: 'Manrope', 'Open Sans', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.2);
+  --shadow-hover: 0 12px 40px rgba(0,0,0,0.3);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* === Base Overrides === */
+body {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-body) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--color-text) !important;
+  letter-spacing: 0.02em;
+}
+
+p {
+  color: var(--color-text-muted) !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: var(--color-accent) !important;
+}
+
+/* === Header === */
+.modern-home .top-bar {
+  background: linear-gradient(90deg, var(--color-bg-elevated) 0%, var(--color-bg-card) 100%) !important;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modern-home .top-bar .contact-info ul li {
+  color: var(--color-text-muted) !important;
+  font-size: 13px;
+}
+
+.modern-home .top-bar .social-icons a {
+  color: var(--color-text-muted) !important;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.modern-home .top-bar .social-icons a:hover {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+}
+
+.modern-home .menu-style-1 {
+  background: rgba(10, 15, 26, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modern-home .main-navigation.navbar-dark .navbar-brand {
+  color: var(--color-text) !important;
+  font-family: var(--font-heading) !important;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.modern-home .main-navigation .nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  padding: 0.75rem 1rem !important;
+  transition: var(--transition);
+}
+
+.modern-home .main-navigation .nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+.modern-home .main-navigation.fixed-header {
+  background: rgba(10, 15, 26, 0.98) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.modern-home .menu-search-box .btn {
+  color: var(--color-text-muted) !important;
+}
+
+.modern-home .menu-search-box .btn:hover {
+  color: var(--color-accent) !important;
+}
+
+/* === Hero Slider === */
+.modern-home .slider-wrapper .carousel-item {
+  min-height: 85vh;
+}
+
+.modern-home .slider-wrapper .slide-image {
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+
+.modern-home .bs-slider-overlay {
+  background: linear-gradient(135deg, rgba(10,15,26,0.85) 0%, rgba(10,15,26,0.4) 100%) !important;
+}
+
+.modern-home .slide-text .sub-title h4 {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+  padding: 10px 24px !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.modern-home .slide-text .title-box h2 {
+  color: #fff !important;
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.modern-home .carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  transition: var(--transition);
+}
+
+.modern-home .carousel-indicators li.active {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+
+.modern-home .carousel-control .fa {
+  font-size: 2rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.modern-home .carousel-control:hover .fa {
+  color: var(--color-accent);
+}
+
+/* === Features Section === */
+.modern-home .welcome-feature-section {
+  padding: 80px 0 !important;
+}
+
+.modern-home .welcome-feature {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.modern-home .welcome-feature:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.modern-home .welcome-feature .thumb {
+  overflow: hidden;
+}
+
+.modern-home .welcome-feature .thumb img {
+  transition: transform 0.6s ease;
+}
+
+.modern-home .welcome-feature:hover .thumb img {
+  transform: scale(1.08);
+}
+
+.modern-home .welcome-feature .thumb::after {
+  background: linear-gradient(to top, var(--color-bg-card), transparent) !important;
+}
+
+.modern-home .welcome-feature .content {
+  background: linear-gradient(to top, var(--color-bg-card), transparent) !important;
+}
+
+.modern-home .welcome-feature .icon-box {
+  background: rgba(245, 158, 11, 0.2) !important;
+  color: var(--color-accent) !important;
+}
+
+.modern-home .welcome-feature .content h2 {
+  color: #fff !important;
+  font-size: 1.25rem;
+}
+
+/* === Section Titles === */
+.modern-home .section-title h2 {
+  color: var(--color-text) !important;
+  font-size: clamp(2rem, 4vw, 2.75rem) !important;
+}
+
+.modern-home .section-title h2 span {
+  color: var(--color-accent) !important;
+}
+
+.modern-home .section-title p {
+  color: var(--color-text-muted) !important;
+}
+
+/* === Services Section === */
+.modern-home .service-section4 {
+  background: var(--color-bg-elevated) !important;
+  padding: 80px 0 !important;
+}
+
+.modern-home .service-item.style-4 {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.modern-home .service-item.style-4:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.modern-home .service-item.style-4 .thumb::after {
+  background: linear-gradient(to top, rgba(10,15,26,0.95), transparent) !important;
+}
+
+.modern-home .service-item.style-4 .thumb .service-link-box a {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.modern-home .service-item.style-4 .thumb .service-link-box a:hover {
+  background: var(--color-accent-hover) !important;
+}
+
+.modern-home .service-item.style-4 .content h3 {
+  color: #fff !important;
+}
+
+/* === Company Section === */
+.modern-home .company-section {
+  background: var(--color-bg) !important;
+  padding: 100px 0 !important;
+}
+
+.modern-home .company-section .content h1 {
+  color: var(--color-text) !important;
+}
+
+.modern-home .company-section .content h1 span {
+  color: var(--color-accent) !important;
+}
+
+.modern-home .company-section .content .p-text {
+  color: var(--color-text-muted) !important;
+  line-height: 1.8;
+}
+
+.modern-home .company-list li {
+  color: var(--color-text-muted) !important;
+}
+
+.modern-home .company-list li i {
+  color: var(--color-accent) !important;
+}
+
+.modern-home .funfact-item h2 {
+  color: var(--color-accent) !important;
+  font-size: 2.5rem;
+}
+
+.modern-home .funfact-item h4 {
+  color: var(--color-text-muted) !important;
+}
+
+.modern-home .company-section .thumb img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+/* === Projects Section === */
+.modern-home .projects-section {
+  background: var(--color-bg-elevated) !important;
+  padding: 80px 0 !important;
+  position: relative;
+}
+
+.modern-home .projects-section.over-layer-white::before {
+  background: rgba(10, 15, 26, 0.92) !important;
+}
+
+.modern-home .projects-item.style-2 {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.modern-home .projects-item.style-2:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.modern-home .projects-item.style-2 .content .counter-item {
+  background: rgba(245, 158, 11, 0.9) !important;
+  color: #000 !important;
+}
+
+.modern-home .projects-item.style-2 .text-bottom {
+  background: var(--color-bg-card) !important;
+  padding: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.modern-home .projects-item.style-2 .content h3 a {
+  color: #fff !important;
+}
+
+.modern-home .projects-item.style-2 .text-bottom h4 {
+  color: var(--color-text) !important;
+}
+
+.modern-home .projects-item .text-bottom .project-btn {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.modern-home .projects-item .text-bottom .project-btn:hover {
+  background: var(--color-accent-hover) !important;
+}
+
+/* Owl Carousel Projects */
+.modern-home .projects-section .owl-nav button {
+  background: var(--color-bg-card) !important;
+  color: var(--color-accent) !important;
+  border: 1px solid var(--color-border);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.modern-home .projects-section .owl-nav button:hover {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+}
+
+.modern-home .projects-section .owl-dots .owl-dot span {
+  background: rgba(255,255,255,0.3) !important;
+}
+
+.modern-home .projects-section .owl-dots .owl-dot.active span {
+  background: var(--color-accent) !important;
+}
+
+/* === Contact CTA === */
+.modern-home .contact-divider {
+  background: linear-gradient(135deg, var(--color-bg-card) 0%, var(--color-bg-elevated) 100%) !important;
+  padding: 60px 0 !important;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modern-home .contact-item h5 {
+  color: var(--color-accent) !important;
+  font-family: var(--font-body) !important;
+  letter-spacing: 0.1em;
+}
+
+.modern-home .contact-item h3 {
+  color: var(--color-text) !important;
+}
+
+.modern-home .contact-btn.style-1 {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+  padding: 14px 32px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.modern-home .contact-btn.style-1:hover {
+  background: var(--color-accent-hover) !important;
+  transform: translateY(-2px);
+}
+
+.modern-home .contact-btn-item h3 {
+  color: var(--color-accent) !important;
+}
+
+/* === Testimonials === */
+.modern-home .testimonials-section {
+  background: var(--color-bg) !important;
+  padding: 80px 0 !important;
+}
+
+.modern-home .testimonials-item {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  padding: 40px;
+  border: 1px solid var(--color-border);
+}
+
+.modern-home .testimonials-item blockquote p {
+  color: var(--color-text) !important;
+}
+
+.modern-home .testimonial-author {
+  color: var(--color-text-muted);
+}
+
+.modern-home .testimonials-item .fa-quote-left {
+  color: var(--color-accent) !important;
+}
+
+/* === Partners/Client Section === */
+.modern-home .client-section {
+  background: var(--color-bg-elevated) !important;
+  padding: 80px 0 !important;
+}
+
+.modern-home .client-img-item {
+  background: var(--color-bg-card);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.modern-home .client-img-item:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.modern-home .client-section .client-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1199px) {
+  .modern-home .client-section .client-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 575px) {
+  .modern-home .client-section .client-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.modern-home .client-img-item img {
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.2);
+  opacity: 0.7;
+}
+
+.modern-home .client-img-item:hover img {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+/* === Footer === */
+.modern-home .bg-faded.bg-theme-color-2 {
+  background: var(--color-bg-card) !important;
+  border-top: 1px solid var(--color-border);
+}
+
+.modern-home footer .footer-title h4 span {
+  color: var(--color-accent) !important;
+}
+
+.modern-home footer p,
+.modern-home footer .footer-list li {
+  color: var(--color-text-muted) !important;
+}
+
+.modern-home .footer-list.footer-contact a {
+  color: var(--color-accent) !important;
+}
+
+.modern-home .social-icon.bordered-theme a {
+  color: var(--color-text-muted) !important;
+  border-color: var(--color-border) !important;
+}
+
+.modern-home .social-icon.bordered-theme a:hover {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+  border-color: var(--color-accent) !important;
+}
+
+.modern-home .input-subscribe {
+  background: var(--color-bg) !important;
+  border: 1px solid var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+
+.modern-home .btn-subscribe {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+  border: none;
+  font-weight: 600;
+}
+
+.modern-home .footer-copy-right {
+  background: var(--color-bg) !important;
+}
+
+/* === Scroll Up Button === */
+.modern-home .scrollup {
+  background: var(--color-accent) !important;
+  color: #000 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modern-home .scrollup:hover {
+  background: var(--color-accent-hover) !important;
+}
+
+/* === Preloader === */
+.modern-home .preloader {
+  background: var(--color-bg) !important;
+}
+
+/* === Search dropdown === */
+.modern-home .dropdown-menu {
+  background: var(--color-bg-card) !important;
+  border: 1px solid var(--color-border);
+}
+
+.modern-home .dropdown-menu .form-control {
+  background: var(--color-bg) !important;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.modern-home .dropdown-menu .form-control::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .modern-home .top-bar {
+    display: none;
+  }
+  
+  .modern-home .slider-wrapper .carousel-item {
+    min-height: 70vh;
+  }
+  
+  .modern-home .slide-text .title-box h2 {
+    font-size: 1.75rem !important;
+  }
+}
