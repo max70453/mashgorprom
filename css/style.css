@@ -963,6 +963,7 @@ a.dropdown-item.active {
 .header .menu-style #logo_img {
     width: 50px;
     border-radius: 50%;
+    filter: invert(1);
 }
 
 /*Fixed Header*/
@@ -977,6 +978,7 @@ a.dropdown-item.active {
 
 .fixed-header #logo_img {
     width: 50px !important;
+    filter: invert(1);
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
@@ -6103,6 +6105,7 @@ footer {
 .footer-logo {
   width: 50px;
   border-radius: 50%;
+  filter: invert(1);
 }
 .footer-logo-2 {
   width: 250px;
@@ -7524,8 +7527,8 @@ M > P Css Style
 section.contact-divider {
     position: relative;
     padding: 70px 0;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-    color: white;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #1a1a1a;
     overflow: hidden;
 }
 
